@@ -35,11 +35,23 @@ Educational project for learning Rails and Tailwind CSS
 - **SQLite3**: 2.6.0 
 ---
 
+## Используемые гемы / Gems used (Summary)
+```ruby
+# Ruby
+ruby (3.4.1)
+# Rails
+rails (8.0.1)
+# Rails tailwind
+turbo-rails (2.0.11)
+tailwindcss-rails (4.1.0)
+```
+
+
 ## Установка / Installation
 
 ### 1. Клонирование репозитория / Clone Repository
 ```bash
-git clone https://github.com/yourusername/educhain.git && cd educhain
+git clone https://github.com/DRY9p/educhain.git && cd educhain
 ```
 
 ### 2. Установка зависимостей / Install Dependencies
@@ -48,18 +60,11 @@ bundle install
 ```
 
 ### 3. Настройка БД / Database Setup
-```ruby
-# Rails
-rails (8.0.1)
-turbo-rails (2.0.11)
-tailwindcss-rails (4.1.0)
-
-# Инструменты / Tools
-rubocop-rails (2.30.2)
-
-# Отладка / Debugging
-pry (0.15.2)
+```bash
+rails db:create
+rails db:migrate
 ```
+
 
 ### 4. Настройка Tailwind CSS v4 / Tailwind CSS Setup v4
 [Install Tailwind CSS with Ruby on Rails](https://tailwindcss.com/docs/installation/framework-guides/ruby-on-rails)
@@ -91,6 +96,6 @@ bin/rails generate controller Landing index
 ```
 ### 3. Проверьте tailwind.application.css / Verify tailwind.application.css:
 ```css
-/*Path: app/assets/tailwind/application.css */
+/* app/assets/tailwind/application.css */
 @import "tailwindcss";
 ```     
