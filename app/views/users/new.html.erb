@@ -1,5 +1,5 @@
-<div class="bg-emerald-100 rounded-xl">
-  <h1 class="p-6 font-bold text-4xl text-mint-500">User</h1>
+<div class="mr-5 bg-emerald-100 rounded-xl">
+  <h1 class="p-6 font-bold text-4xl text-mint-500 text-center">Authorization</h1>
   <%= form_with model: @user, local: true do |form| %>
     <div class="p-6">
       <%= form.label :email, class: "block mb-2 text-sm font-medium text-blue-900"%>
@@ -10,35 +10,34 @@
       <%= form.password_field :password, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5", placeholder: "Your password"%>
     </div>
     <button type="submit" 
-        class="text-white bg-emerald-300 hover:bg-mint-500 focus:ring-4 
-               focus:outline-none focus:ring-mint-500 font-medium rounded-lg 
+        class="mb-6 text-white bg-emerald-300 hover:bg-mint-500 focus:ring-4 
+               focus:outline-none focus:ring-mint-500 font-medium rounded-md 
                text-sm w-full sm:w-auto px-10 py-2.5 text-center mx-auto block">
       Submit
     </button>
   <%end%>
 </div>
-<div class="ml-30 bg-emerald-100 rounded-xl">
-  <h2
-    class="text-center font-semibold text-gray-900 sm:text-red-800 lg:text-mint-500  " 
-  >
-    Additional information about user
+<div class="w-full bg-emerald-100 rounded-xl">
+  <h2 class="py-4 text-center font-semibold text-gray-900 sm:text-red-500 md:text-blue-500 lg:text-mint-500">
+    Additional information about users nationality
   </h2>
 
-  <div class="p-6 sm:col-span-2 md:col-span-3">
-    <label for="region" class="p-1 bg-mint-500 rounded-md text-sm font-medium leading-6 text-gray-900">
+  <div class="p-6 gap-x-6 sm:col-span-2 md:col-span-3">
+    <label for="state" class="p-1 bg-mint-500 rounded-md text-sm font-medium leading-6 text-gray-900">
       State
     </label>
-    <label for="region" class="p-1 bg-gray-900 rounded-md text-sm font-medium leading-6 text-gray-200">
-      City
+    <label for="country" class="p-1 bg-gray-900 rounded-md text-sm font-medium leading-6 text-gray-200">
+      Country
     </label>
   </div>
 
-  <div class="p-3 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-6 md:grid-cols-8">
-    <div class="p-2 bg-yellow-500 rounded-md text-center">Russia</div>
-    <div class="p-2 bg-emerald-500 rounded-md text-center">Belarus</div>
-    <div class="p-2 bg-red-600 rounded-md text-center">Japan</div>
+  <div class="px-6 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+    <div class="p-2 bg-yellow-500 rounded-full text-center">Russia</div>
+    <div class="p-2 bg-emerald-500 rounded-full text-center">Belarus</div>
+    <div class="p-2 bg-red-600 rounded-full text-center">China</div>
+    <div class="p-2 bg-gray-500 rounded-full text-center">Germany</div>
+    <div class="p-2 bg-blue-500 rounded-full text-center">Greece</div>
+    <div class="p-2 bg-gray-300 rounded-full text-center">Israel</div>
+    <div class="p-2 bg-emerald-500 rounded-full text-center">Japan</div>
   </div>
-
-  
-  <!--todo - dodo :)) create the new hide blured filter-->
 </div>
