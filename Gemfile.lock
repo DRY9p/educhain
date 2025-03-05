@@ -108,6 +108,8 @@ GEM
     erubi (1.13.1)
     et-orbi (1.2.11)
       tzinfo
+    faker (3.5.1)
+      i18n (>= 1.8.11, < 2)
     fugit (1.11.1)
       et-orbi (~> 1, >= 1.2.11)
       raabro (~> 1.4)
@@ -343,6 +345,10 @@ GEM
     unicode-emoji (4.0.4)
     uri (1.0.3)
     useragent (0.16.11)
+    view_component (3.21.0)
+      activesupport (>= 5.2.0, < 8.1)
+      concurrent-ruby (~> 1.0)
+      method_source (~> 1.0)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -372,11 +378,12 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  faker (~> 3.5)
   importmap-rails
   jbuilder
   kamal
   propshaft
-  pry
+  pry (>= 0.15)
   puma (>= 5.0)
   rails (~> 8.0.1)
   rubocop-rails-omakase
@@ -391,6 +398,7 @@ DEPENDENCIES
   thruster
   turbo-rails
   tzinfo-data
+  view_component (~> 3.21.0)
   web-console
 
 BUNDLED WITH

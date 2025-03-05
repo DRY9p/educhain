@@ -49,4 +49,6 @@ end
 
 gem "tailwindcss-ruby", "~> 4.0"
 
-gem "pry"
+gem "pry", ">= 0.15"
+
+gem "view_component", "~> 3.21.0"
