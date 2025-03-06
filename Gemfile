@@ -54,3 +54,5 @@ gem "pry", ">= 0.15"
 gem "view_component", "~> 3.21.0"
 
 gem "faker", "~> 3.5"
+
+gem "money-rails", "~> 1.12"
