@@ -378,7 +378,7 @@ DEPENDENCIES
   brakeman
   capybara
   debug
-  faker
+  faker (~> 3.5)
   importmap-rails
   jbuilder
   kamal
