@@ -1,5 +1,6 @@
 module CoursesHelper
-  def to_default_currency
-    Money.new(@course.price_cents)
+  def count_enrollees(course)
+    count = (course.price_cents / 4).round
+    tag.p "#{count} enrollees so far"
   end
 end
