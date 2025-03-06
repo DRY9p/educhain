@@ -1,1 +1,7 @@
-<div>Add Course template here</div>
+<div class="items-center mt-4 p-2 bg-gray-500 rounded-xl"> 
+  <h2><%= @counter %>) <%= @item.title%></h2>
+  <h4><%= Money.new(@item.price_cents, "RUB").format %></h4>
+  <h4><%= @item.location %></h4>
+  <div><%= render(DiscountComponent.new(item: @item)) %></div>
+  <p><%= link_to @notice, "#", class: "bg-mint-500 rounded-lg px-4 py-1" %></p>
+</div>
