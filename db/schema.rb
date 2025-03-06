@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_06_035327) do
+ActiveRecord::Schema[8.0].define(version: 2025_03_06_074047) do
   create_table "courses", force: :cascade do |t|
     t.string "title"
-    t.decimal "price"
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "RUB", null: false
   end
 
   create_table "users", force: :cascade do |t|
