@@ -11,10 +11,10 @@
       <% end %> %>
     -->
     <% course_titles = Course.all.pluck(:title).map { |title| {title: title}} %>
-    
+
     <% course_titles.each do | title | %>
       <div class='container p-2 m-2 bg-lime-400 rounded-xl text-xl text-lime-700'>
-        <%= title.values.join %>
+        <%= link_to title.values.join, "#" %>
       </div>
     <% end %>
   <% end %>
