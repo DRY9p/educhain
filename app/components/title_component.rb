@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class TitleComponent < ViewComponent::Base
-  def initilize(title:)
+  def initialize(title:)
     @title = title
   end
 end
