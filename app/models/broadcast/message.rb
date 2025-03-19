@@ -10,7 +10,7 @@ module Broadcast
 
     def append
       Turbo::StreamsChannel.broadcast_append_later_to(
-        :message,
+        :messages,
         target: "messages",
         html: rendered_component
       )
