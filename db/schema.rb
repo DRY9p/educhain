@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_06_074047) do
+ActiveRecord::Schema[8.0].define(version: 2025_03_14_110909) do
   create_table "courses", force: :cascade do |t|
     t.string "title"
     t.string "location"
@@ -18,6 +18,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_06_074047) do
     t.datetime "updated_at", null: false
     t.integer "price_cents", default: 0, null: false
     t.string "price_currency", default: "RUB", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
