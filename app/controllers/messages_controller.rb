@@ -4,7 +4,11 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.create(body: params[:body])
+    @message = Message.new(body: params[:body])
+
+    if @message.save
+      Broadcast::Message.append(message: @message)
+    end
 
     respond_to do |format|
       format.html { redirect_to messages_path }

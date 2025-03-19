@@ -9,8 +9,8 @@ module Broadcast
     end
 
     def append
-      Turbo::StreamChannel.broadcast_append_later_to(
-        :messages,
+      Turbo::StreamsChannel.broadcast_append_later_to(
+        :message,
         target: "messages",
         html: rendered_component
       )
@@ -18,7 +18,7 @@ module Broadcast
 
     private
 
-    attr_reader :messages
+    attr_reader :message
 
     def rendered_component
       ApplicationController.render(
