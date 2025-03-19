@@ -4,7 +4,7 @@ class MessageComponent < ViewComponent::Base
   include ActionView::RecordIdentifier
 
   def initialize(message:)
-    @message = meassage
+    @message = message
   end
 
   private
